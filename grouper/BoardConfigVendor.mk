@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_STEM := grouper/device-partial.mk
+LOCAL_STEM := grouper/BoardConfigPartial.mk
 
-$(call inherit-product-if-exists, vendor/asus/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/broadcom/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/elan/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/invensense/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/nvidia/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/nxp/$(LOCAL_STEM))
-$(call inherit-product-if-exists, vendor/widevine/$(LOCAL_STEM))
-
-PRODUCT_RESTRICT_VENDOR_FILES := owner
+-include vendor/asus/$(LOCAL_STEM)
+-include vendor/broadcom/$(LOCAL_STEM)
+-include vendor/elan/$(LOCAL_STEM)
+-include vendor/invensense/$(LOCAL_STEM)
+-include vendor/nvidia/$(LOCAL_STEM)
+-include vendor/nxp/$(LOCAL_STEM)
+-include vendor/widevine/$(LOCAL_STEM)
